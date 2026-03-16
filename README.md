@@ -1,94 +1,93 @@
-# 🛸 UFO — Курсовая работа по ООП
+# 🛸 UFO
 
-> Маленькая игра про инопланетянина, написанная на C/C++ в рамках курсового проекта по объектно-ориентированному программированию.
-
----
-
-## 📖 Описание
-
-**UFO** — небольшая 2D-игра, главным героем которой является инопланетянин. Проект реализован на языке C/C++ с применением принципов объектно-ориентированного программирования: инкапсуляции, наследования и полиморфизма.
+> A small 2D game about an alien, written in C/C++ as a coursework project on Object-Oriented Programming.
 
 ---
 
-## 🗂️ Структура проекта
+## 📖 Description
+
+**UFO** is a small 2D game where you control an alien. The project is built in C/C++ using the [raylib](https://www.raylib.com/) graphics library, and demonstrates core OOP principles: encapsulation, inheritance, and polymorphism.
+
+---
+
+## 🗂️ Project Structure
 
 ```
 Ufo-courcework/
-├── src/          # Исходный код (.c / .cpp)
-├── headers/      # Заголовочные файлы проекта (.h)
-├── include/      # Заголовочные файлы внешних библиотек
-├── lib/          # Внешние библиотеки
-├── data/         # Игровые ресурсы (спрайты, звуки и т.д.)
-├── .vscode/      # Конфигурация Visual Studio Code
-├── Ufo.exe       # Готовый исполняемый файл (Windows)
-└── run.ps1       # PowerShell-скрипт для запуска
+├── src/          # Source files (.c / .cpp)
+├── headers/      # Project header files (.h)
+├── include/      # External library headers (raylib)
+├── lib/          # External library binaries
+├── data/         # Game assets (sprites, sounds, etc.)
+├── .vscode/      # Visual Studio Code configuration
+├── Ufo.exe       # Pre-built executable (Windows)
+└── run.ps1       # PowerShell launch script
 ```
 
 ---
 
-## 🚀 Запуск
+## 🚀 Getting Started
 
-### Вариант 1 — Готовый исполняемый файл
+### Option 1 — Pre-built Executable
 
-Просто запустите `Ufo.exe` из корня репозитория.
+Just run `Ufo.exe` from the repository root. No installation required.
 
-### Вариант 2 — Через PowerShell
+### Option 2 — Via PowerShell
 
 ```powershell
 .\run.ps1
 ```
 
-> **Примечание:** при первом запуске PowerShell может потребовать разрешения на выполнение скриптов. В таком случае выполните:
+> **Note:** On first run, PowerShell may restrict script execution. Fix it with:
 > ```powershell
 > Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 > ```
 
-### Вариант 3 — Сборка из исходников (VSCode + GCC/MinGW)
+### Option 3 — Build from Source (VSCode + GCC/MinGW)
 
-1. Убедитесь, что установлен компилятор **GCC** (например, через [MinGW-w64](https://www.mingw-w64.org/)).
-2. Откройте папку проекта в **Visual Studio Code**.
-3. Используйте задачу сборки (`Ctrl+Shift+B`) или скомпилируйте вручную:
+1. Install **GCC** via [MinGW-w64](https://www.mingw-w64.org/).
+2. Open the project folder in **Visual Studio Code**.
+3. Use the build task (`Ctrl+Shift+B`) or compile manually:
 
 ```bash
-gcc src/*.c -o Ufo.exe -I include -L lib -lSDL2 -lSDL2main
+gcc src/*.c -o Ufo.exe -I include -L lib -lraylib -lopengl32 -lgdi32 -lwinmm
 ```
 
-> Флаги линковки могут отличаться в зависимости от используемых библиотек.
+---
+
+## 🛠️ Tech Stack
+
+| Component        | Details                                  |
+|------------------|------------------------------------------|
+| Language         | C / C++                                  |
+| Graphics Library | [raylib](https://www.raylib.com/)        |
+| Paradigm         | Object-Oriented Programming              |
+| IDE              | Visual Studio Code                       |
+| Platform         | Windows                                  |
+| Scripting        | PowerShell                               |
 
 ---
 
-## 🛠️ Технологии
+## 📋 Requirements
 
-| Компонент       | Описание                        |
-|-----------------|---------------------------------|
-| Язык            | C / C++                         |
-| Парадигма       | Объектно-ориентированное программирование |
-| Среда разработки | Visual Studio Code              |
-| Целевая платформа | Windows                       |
-| Скриптинг       | PowerShell                      |
+- **OS:** Windows 7 / 10 / 11
+- **To run `.exe`:** nothing extra needed — dependencies are bundled
+- **To build from source:** GCC / MinGW-w64 and the `.dll` files from the `lib/` folder
 
 ---
 
-## 📋 Требования
+## 🎓 Academic Context
 
-- **ОС:** Windows 7 / 10 / 11
-- **Для запуска `.exe`:** ничего дополнительного не требуется (зависимости включены)
-- **Для сборки из исходников:** GCC / MinGW-w64, необходимые `.dll`-файлы из папки `lib`
+This project was developed as a coursework assignment for the **Object-Oriented Programming** course. Key concepts applied:
 
----
-
-## 🎓 Учебный контекст
-
-Проект выполнен как курсовая работа по дисциплине **«Объектно-ориентированное программирование»**. В ходе разработки были применены:
-
-- Проектирование классов и объектов
-- Инкапсуляция данных и методов
-- Работа с игровым циклом (game loop)
-- Обработка пользовательского ввода
-- Отрисовка графики с помощью внешней библиотеки
+- Class and object design
+- Data encapsulation and method abstraction
+- Game loop architecture
+- User input handling
+- 2D rendering with raylib
 
 ---
 
-## 👤 Автор
+## 👤 Author
 
 **Deokma** — [github.com/Deokma](https://github.com/Deokma)
