@@ -87,7 +87,3 @@ This project was developed as a coursework assignment for the **Object-Oriented 
 - 2D rendering with raylib
 
 ---
-
-## 👤 Author
-
-**Deokma** — [github.com/Deokma](https://github.com/Deokma)
